@@ -1,5 +1,6 @@
 // Imports go first
 import { toSellOrNotToSell, usePottery } from "./PotteryCatalog.js";
+import { potteryList } from "./PotteryList.js";
 import { makePottery } from "./PotteryWheel.js";
 import { firePottery } from  "./kiln.js"
 
@@ -25,7 +26,7 @@ firePottery(pot, 1900);
 firePottery(turtle, 1252);
 
 
-console.log(mug, plate, fork, pot, turtle)
+
 
 
 
@@ -36,9 +37,15 @@ toSellOrNotToSell(fork);
 toSellOrNotToSell(pot);
 toSellOrNotToSell(turtle);
 
+
+
+
 const potteryToSell = usePottery();
 console.log(potteryToSell);
 
 
 
 // Invoke the component function that renders the HTML list
+
+const parentHTMLElement = document.querySelector(".potteryList");
+parentHTMLElement.innerHTML = potteryList(potteryToSell);

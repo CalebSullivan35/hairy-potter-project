@@ -6,9 +6,13 @@
 
 export const firePottery = (potteryPiece, temperatureofKiln,) => {
   if (temperatureofKiln > 2200) {
+    potteryPiece.fired = true;
     potteryPiece.cracked = true;
+    
   } else {
+    potteryPiece.fired = true;
     potteryPiece.cracked = false;
+    
   }
   return potteryPiece;
 }
